@@ -1,0 +1,384 @@
+/* Global Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*background-color: #f0f0f0;*/
+    background-color: #1d67b696;
+}
+
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* Header Styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(8, 33, 76, 0.9);
+    /* الشفافية */
+    color: white;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    /* مركز العناصر */
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(193, 221, 237, 0.5);
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    margin-top: 70px;
+}
+
+
+/* Hero Section Styling */
+
+.hero-section {
+    position: relative;
+    height: 100vh;
+    background: url('../images/Background.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-size: cover;
+    background-position: center;
+    /* Changed from center to flex-start */
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding-top: 200px;
+    /* Added padding to move content down */
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.hero-section h1,
+.hero-section p,
+.hero-section button {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    padding-top: 200px;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    /*padding-top: 50px;*/
+}
+
+.hero-section button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #225aba;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.hero-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Images */
+.home img,
+.about img {
+    max-width: 100%;
+    height: auto;
+}
+
+.team-photos img {
+    max-width: 150px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+
+/* Contact Section Styling */
+.contact {
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 40px 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1200px;
+    text-align: left;
+}
+
+.contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    /*text-align: center;*/
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left {
+    width: 55%;
+}
+
+.right {
+    width: 40%;
+}
+
+.right img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.contact a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Centered Text Styling */
+.center-text {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 20px 0;
+}
+
+.image-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+/* Section Styling */
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+section .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section .content .text {
+    flex: 1;
+}
+
+section .content img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 20px;
+}
+
+section .content .right-img {
+    order: 2;
+}
+
+section .content .left-img {
+    order: 1;
+}
+
+/* About Section */
+.about {
+    background-color: #ffffff;
+}
+
+.about .content {
+    flex-direction: row-reverse;
+}
+
+.about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    /*text-align: center;*/
+}
+
+.about p {
+    font-size: 1.1rem;
+}
+
+/* Vision Section */
+.vision {
+    /*background-color: #CBDCEB;*/
+    background-color: #ffffff;
+
+}
+
+.vision .content {
+    flex-direction: row;
+
+}
+
+.vision h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    /*text-align: center;*/
+}
+
+.vision p {
+    font-size: 1.1rem;
+}
+
+/* Mission Section */
+.mission {
+    /*background-color: #CBDCEB;*/
+    background-color: #ffffff;
+
+}
+
+.mission .content {
+    flex-direction: row-reverse;
+}
+
+.mission h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    /*text-align: center;*/
+}
+
+.mission p {
+    font-size: 1.1rem;
+}
+
+/* Team Section */
+.team {
+    /* background-color: #CBDCEB;*/
+    background-color: #ffffff;
+
+
+}
+
+.team .content {
+    flex-direction: row;
+}
+
+.team h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    /*text-align: center;*/
+}
+
+.team p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.team-photos {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.team-photos img {
+    max-width: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.services h1 {
+    margin-top: 20px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #08214c;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    position: relative;
+}
